@@ -1,4 +1,5 @@
 from transformers import pipeline, Conversation
+import os 
 
 class ChatBot: 
     #Usage 
@@ -7,7 +8,13 @@ class ChatBot:
     def __init__(self): 
       #create conversational pipeline and establish counter for current conversation and create Converastion() object
       #self.conversational_pipeline = pipeline(model="conversational_model", task="conversational")
-      self.conversational_pipeline = pipeline("conversational")
+      #check for model 
+      if os.path.isdir('model'):
+        #if model found use it
+        self.conversational_pipeline = pipeline(model="./model", task="conversational")    
+      #otherwise download model 
+      else: 
+        self.conversational_pipeline = pipeline("conversational")
       self.keep_short_conversation = 0 
       self.conversation = Conversation()
 
