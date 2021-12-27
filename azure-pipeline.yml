@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.9"
+install: "pip install -r requirements.txt"
+before_script:
+  - cp .env.example .env
+script:
+  - flake8 cmdbox
+  - coverage run manage.py test --settings=cmdbox.tests_settings
+after_success:
+  - coveralls
