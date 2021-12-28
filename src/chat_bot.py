@@ -1,8 +1,6 @@
 """
-chat_bot_final script
-```python chat_bot_final.py```
+Chat_Bot model
 """
-
 
 import os
 from transformers import pipeline, Conversation
@@ -95,7 +93,3 @@ class ChatBot:
         self.start_conversation()
 
 
-# instantiate chatbot
-chat_bot = ChatBot()
-# start a conversation
-chat_bot.start_conversation()
