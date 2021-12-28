@@ -2,3 +2,4 @@ flake8==4.0.1
 pylint==2.12.2
 tensorflow==2.7.0
 transformers==4.15.0
+black==21.12b0
