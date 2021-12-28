@@ -1,12 +1,12 @@
 # Chat Bot
 
-# About 
+# About
 
 **A conversational chat bot built using hugging face transformers and tensorflow**
 
-### Instructions to run  
+### Instructions to run
 
 
-```pip install --upgrade tensorflow transformers```  
-```python chat_bot_final.py```  
+```pip install --upgrade tensorflow transformers```
+```python main.py```
 ```ask questions```
